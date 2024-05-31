@@ -4,7 +4,7 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { developmentChains } from "../hardhat-config-helper";
 import verify from "../utils/verify";
 
-const deployRaffle: DeployFunction = async function (
+const deployBasicNft: DeployFunction = async function (
     hre: HardhatRuntimeEnvironment
 ) {
     const accounts = await ethers.getSigners();
@@ -22,5 +22,5 @@ const deployRaffle: DeployFunction = async function (
     }
     hre.deployments.log("---------------------------------");
 };
-export default deployRaffle;
-deployRaffle.tags = ["all", "basicnft", "main"];
+export default deployBasicNft;
+deployBasicNft.tags = ["all", "basicnft", "main"];

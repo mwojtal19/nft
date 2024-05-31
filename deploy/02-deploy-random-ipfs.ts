@@ -31,7 +31,7 @@ const metadataTemplate: Metadata = {
     ],
 };
 
-const deployRaffle: DeployFunction = async function (
+const deployRandomIpfsNft: DeployFunction = async function (
     hre: HardhatRuntimeEnvironment
 ) {
     const accounts = await ethers.getSigners();
@@ -128,5 +128,5 @@ async function handleTokenUris(): Promise<string[]> {
     return tokenUris;
 }
 
-export default deployRaffle;
-deployRaffle.tags = ["all", "randomipfs", "main"];
+export default deployRandomIpfsNft;
+deployRandomIpfsNft.tags = ["all", "randomipfs", "main"];

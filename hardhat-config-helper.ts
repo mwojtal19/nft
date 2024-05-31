@@ -8,6 +8,7 @@ interface NetworkConfig {
         gasLane: string;
         subscriptionId?: string;
         callbackGasLimit: string;
+        ethUsdPriceFeed?: string;
     };
 }
 
@@ -21,6 +22,7 @@ export const networkConfig: NetworkConfig = {
             "85269588487918832052074615743894198111578906957693653135143052591365758095129",
         callbackGasLimit: "500000",
         mintFee: parseEther("0.01"),
+        ethUsdPriceFeed: "0x694AA1769357215DE4FAC081bf1f309aDC325306",
     },
     31337: {
         name: "hardhat",
@@ -32,5 +34,3 @@ export const networkConfig: NetworkConfig = {
 };
 
 export const developmentChains = [31337];
-export const DECIMALS = 8;
-export const INITIAL_SUPPLY = "1000000000000000000000000";
